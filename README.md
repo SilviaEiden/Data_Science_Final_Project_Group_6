@@ -37,13 +37,13 @@ The following attributes are contained in the datset:
 
 - Is there a relationship between travel destination and insurance claims?
 - Is there a relationship between type of travel insurance agencies and insurance claims?
-- Is there a relationship between duration of travel of travel insurance agencies and insurance claims?
-- Is there a relationship betwee age of insured and insurance claims?
+- Is there a relationship between duration of travel and insurance claims?
+- Is there a relationship between age of insured and insurance claims?
 - Can these data points be used to accurately predict insurance claims?
-- Does type of sales affect claims or amount of insurance sold or claims?
+- Does type of sales (ie.: online, product) affect claims or the amount of insurance sold?
 - Are there any other trends that could be used to determine the likelihood of insurance claims being filed?
 
-Answers to these questions can be used to determine sales stategies for areas that are lacking, risky areas to sell travel inusrance and if the business is a worthwhile investment. 
+Answers to these questions can be used to determine sales strategies for areas that are lacking, risky areas to sell travel insurance and if the business is a worthwhile investment. 
 
 
 ## Git Hub
@@ -55,7 +55,7 @@ A Git Hub Main Branch was created with four branches for team members to contrib
 
 ### Description of the communication protocols:
 
-Communication venues were set up for the team via Slack, Group text, and Zoom meetings. Team members were assigned weekly roles and each member committed the resuls of their tasks to Git Hub.
+Communication venues were set up for the team via Slack, Group text, and Zoom meetings. Team members were assigned weekly roles and each member committed the results of their tasks to Git Hub.
 
 ## Machine Learning Model
 
