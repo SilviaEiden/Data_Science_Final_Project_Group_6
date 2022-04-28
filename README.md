@@ -48,24 +48,14 @@ Answers to these questions can be used to determine sales stategies for areas th
 
 ## Git Hub
 
-A Git Hub Main Branch was created with four branches for team members to contribute to based on the portion of the project being worked on.  The following brances were created and each team member was to have at least four commits from the duration of the first segment.
+A Git Hub Main Branch was created with four branches for team members to contribute to based on the portion of the project being worked on.  The following branches were created and each team member was to have at least four commits from the duration of the first segment.
+
+![GitHubBranches](https://user-images.githubusercontent.com/95321969/165659963-0cb6812c-a2d7-4af9-b30d-6d502e165ab9.png)
 
 
 ### Description of the communication protocols:
 
 Communication venues were set up for the team via Slack, Group text, and Zoom meetings. Team members were assigned weekly roles and each member committed the resuls of their tasks to Git Hub.
-
-Individual Branches 
-- At least one branch for each team 
-member 
-- Each team member has at least four 
-commits from the duration of the first 
-segment 
-Note: The descriptions and 
-explanations required in all other 
-project deliverables should also be in 
-your README.md as part of your 
-outline, unless otherwise noted.
 
 ## Machine Learning Model
 
@@ -88,7 +78,7 @@ schema
 - Draft machine learning module is 
 connected to the provisional databas
 
-# Dashboard
+## Dashboard
 N/A
 
 
