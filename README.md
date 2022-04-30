@@ -1,7 +1,9 @@
-# Data_Science_Final_Project_Group_6
-Module 20 - Data Science - Final Project
+# Data Science Final Project Group 6
 
-# Presentation
+## Purpose
+The purpose of this project is to demonstrate our skills developed over our six month data visualization bootcamp.
+
+## Presentation
 ### Team Members:
 - Liliia Strukova
 - Silvia Eiden
@@ -9,19 +11,19 @@ Module 20 - Data Science - Final Project
 - Maureen Hubka
 
 ### Selected topic: 
- - Travel Insurance Claims Dataset
+Travel insurance claims. 
  
 ### Reason: 
-- The Travel Insurance Claims Dataset was chosen to investigate business opportunities to sell travel insurance in Singapore. We can investigate the pros and cons of investing in this type of business and gain insight into the market's trends.  We can use Machine Learning to gauge the accuaracy of the dataset to see if it can be used to develop a business model plan. 
+The travel insurance claims dataset was chosen to investigate business opportunities to sell travel insurance. We can investigate the pros and cons of investing in this type of business and gain insight into the market's trends.  We can use Machine Learning to gauge the accuracy of the dataset to see if it can be used to develop a business model plan. 
 
 ### Description of the Data:
 
-The Travel Insurance Dataset is from a third-party travel insurance servicing company that is based in Singapore. The dataset was downloaded from Kaggle website.
+The Travel Insurance Dataset is from a third-party travel insurance servicing company that is based in Singapore. The dataset was downloaded from Kaggle website. 
 
 https://www.kaggle.com/datasets/mhdzahier/travel-insurance
 
-The following attributes are contained in the datset:
--  Target: Claim Status (Claim.Status)
+The following attributes are contained in the dataset:
+- Target: Claim Status (Claim.Status)
 - Name of agency (Agency)
 - Type of travel insurance agencies (Agency.Type)
 - Distribution channel of travel insurance agencies (Distribution.Channel)
@@ -40,15 +42,15 @@ The following attributes are contained in the datset:
 - Is there a relationship between duration of travel and insurance claims?
 - Is there a relationship between age of insured and insurance claims?
 - Can these data points be used to accurately predict insurance claims?
-- Does type of sales (ie.: online, product) affect claims or the amount of insurance sold?
+- Does type of sales (i.e.: online, product) affect claims or the amount of insurance sold?
 - Are there any other trends that could be used to determine the likelihood of insurance claims being filed?
 
 Answers to these questions can be used to determine sales strategies for areas that are lacking, risky areas to sell travel insurance and if the business is a worthwhile investment. 
 
 
-## Git Hub
+## GitHub
 
-A Git Hub Main Branch was created with four branches for team members to contribute to based on the portion of the project being worked on.  The following branches were created and each team member was to have at least four commits from the duration of the first segment.
+A GitHub Main Branch was created with four branches for team members to contribute to, based on the portion of the project being worked on.  The following branches were created and each team member was to have at least four commits from the duration of the first segment.
 
 ![GitHubBranches](https://user-images.githubusercontent.com/95321969/165659963-0cb6812c-a2d7-4af9-b30d-6d502e165ab9.png)
 
@@ -69,15 +71,11 @@ database
 
 ## Database
 
-The Travel Insurance Claims Dataset csv file was downloaded from Kaggle. It was visaully analyzed to determine what fields would be most useful. It was then pulled into PGADMIN. SQL code was used in query tool to successfully create tables. 
+The Travel Insurance Claims Dataset csv file was downloaded from Kaggle. It was visually analyzed to determine what fields would be most useful. It was then pulled into PGADMIN. SQL code was used in query tool to successfully create tables. 
 
-- Sample data that mimics the 
-expected final database structure or 
-schema 
-- Draft machine learning module is 
-connected to the provisional databas
+
 
 ## Dashboard
-N/A
+Tableau will be used as a data visual dashboard for the project. Microsoft Power Point slides will be used for the demo presentation. 
 
 
