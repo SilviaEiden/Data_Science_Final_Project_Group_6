@@ -68,10 +68,9 @@ database
 - Outputs label(s) for input data
 
 ## Database
-Team members present a provisional 
-database that stands in for the final 
-database and accomplishes the 
-following: 
+
+The Travel Insurance Claims Dataset csv file was downloaded from Kaggle. It was visaully analyzed to determine what fields would be most useful. It was then pulled into PGADMIN. SQL code was used in query tool to successfully create tables. 
+
 - Sample data that mimics the 
 expected final database structure or 
 schema 
