@@ -53,7 +53,7 @@ Answers to these questions can be used to determine sales strategies for areas t
 
 A GitHub Main Branch was created with four branches for team members to contribute to, based on the portion of the project being worked on.  The following branches were created and each team member was to have at least four commits from the duration of the first segment.
 
-![GitHubBranches](https://user-images.githubusercontent.com/95321969/165659963-0cb6812c-a2d7-4af9-b30d-6d502e165ab9.png)
+![image_GitHubBranches.png](GitHubBranches.png)
 
 
 ### Description of the communication protocols:
@@ -80,7 +80,7 @@ The Travel Insurance Claims Dataset csv file was downloaded from Kaggle. It was 
 
 It was then pulled into PGADMIN. SQL code was used in query tool to successfully create tables. 
 
-![SQL_clean](https://user-images.githubusercontent.com/95321969/166158849-83b48720-4f1f-47e9-ab4d-f75d655ef6e1.png)
+![image_SQL_clean.png](SQL_clean.png)
 
 ## Dashboard
 Tableau will be used as a data visual dashboard for the project. Microsoft Power Point slides will be used for the demo presentation. 
