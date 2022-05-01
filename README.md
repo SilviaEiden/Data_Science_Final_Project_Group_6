@@ -1,9 +1,10 @@
 # Data Science Final Project Group 6
 
 ## Purpose
-The purpose of this project is to demonstrate our skills developed over our six month data visualization bootcamp.
+The purpose of this project is to demonstrate the skills we developed over our six month data visualization bootcamp class.
 
 ## Presentation
+
 ### Team Members:
 - Liliia Strukova
 - Silvia Eiden
@@ -61,19 +62,25 @@ Communication venues were set up for the team via Slack, Group text, and Zoom me
 
 ## Machine Learning Model
 
-Team members present a provisional 
-machine learning model that stands in 
-for the final machine learning model 
-and accomplishes the following:
-- Takes in data in from the provisional 
-database
-- Outputs label(s) for input data
+Since our dataset contains labeled data and we know our output, whether the travel insurance was claimed (1) or not (0), we are going to work with classification model of supervised machine learning. We will use Scikit-learn library to implement a machine learning model in Python. Logistic regression was chosen since this is a popular classification model. It predicts binary outcomes, meaning that there are only two possible outcomes.
+
+The dataset was divided into a target and features.  The target is the Claim column and the features are all other columns, beause we want to predict whether or not the person will claim a travel insurance based on different criteria (travel destination, duration, age of insured person, etc.).
+
+Logistics Regression itself gave an accuracy of 98.53% and balanced accuracy score of 50%. This huge difference is because the dataset is not balanced. We can see this also from checking the balance of our target values that show us 61,373 lines of data for not claimed insurance and only 917 lines of data for claimed.
+
 
 ## Database
 
-The Travel Insurance Claims Dataset csv file was downloaded from Kaggle. It was visually analyzed to determine what fields would be most useful. It was then pulled into PGADMIN. SQL code was used in query tool to successfully create tables. 
+The Travel Insurance Claims Dataset csv file was downloaded from Kaggle. It was visually analyzed to determine what fields would be most useful. The dataset was cleaned with PANDAS in Jupyter Notebook as followed.
 
+- Gender column was dropped due the large number of null values.
+- Claim column transformed to 1 for “yes” and 0 for “no”.
+- There were few lines of data with negative and zero values in the Duration column which were dropped. 
+- As per boxplot for Age column there were a many of outliers, but 118 is the only large one. Those lines were dropped as well.
 
+It was then pulled into PGADMIN. SQL code was used in query tool to successfully create tables. 
+
+![SQL_clean](https://user-images.githubusercontent.com/95321969/166158849-83b48720-4f1f-47e9-ab4d-f75d655ef6e1.png)
 
 ## Dashboard
 Tableau will be used as a data visual dashboard for the project. Microsoft Power Point slides will be used for the demo presentation. 
