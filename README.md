@@ -4,7 +4,6 @@
 ## Purpose
 The purpose of this project is to demonstrate the skills we developed over our six month data visualization bootcamp class.
 
-## Presentation
 
 ### Team Members:
 - Liliia Strukova
@@ -84,7 +83,11 @@ It was then pulled into PGADMIN. SQL code was used in query tool to successfully
 ![image_SQL_clean.png](Resources/SQL_clean.png)
 
 ## Dashboard
-Tableau will be used as a data visual dashboard for the project. Microsoft Power Point slides will be used for the demo presentation. 
+Tableau will be used as a data visual dashboard for the project. 
+
+## Presentation
+
+Google slides will be used for the demonstation presentation. 
 
 
 
