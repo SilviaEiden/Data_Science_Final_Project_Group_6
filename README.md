@@ -83,6 +83,11 @@ It was then pulled into PGADMIN. SQL code was used in query tool to successfully
 ![image_SQL_clean.png](SQL_clean.png)
 
 ## Dashboard
-Tableau will be used as a data visual dashboard for the project. Microsoft Power Point slides will be used for the demo presentation. 
+
+Tableau Public Link: [Data Science - Final Project - Group 6]( https://public.tableau.com/views/DataScience-FinalProject-Group6/Story1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
+
+The purpose of this section is to convey a compelling story of the Travel Insurance Dataset through a series of graphs, and by using Tableau Public we can create visualizations that are easy to read and understand. As a team, we determined Tableau Public is a great tool to add value to our final project as it encourages the viewer to interact with the data for further analysis.
+
+
 
 
