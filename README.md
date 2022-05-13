@@ -19,9 +19,7 @@ The travel insurance claims dataset was chosen to investigate business opportuni
 
 ### Description of the Data:
 
-The Travel Insurance Dataset is from a third-party travel insurance servicing company that is based in Singapore. The dataset was downloaded from Kaggle website. 
-
-https://www.kaggle.com/datasets/mhdzahier/travel-insurance
+The Travel Insurance Dataset is from a third-party travel insurance servicing company that is based in Singapore. The dataset was downloaded from [Kaggle](https://www.kaggle.com/datasets/mhdzahier/travel-insurance) website.
 
 The following attributes are contained in the dataset:
 - Target: Claim Status (Claim.Status)
@@ -71,16 +69,16 @@ Logistics Regression itself gave an accuracy of 98.53% and balanced accuracy sco
 
 ## Database
 
-The Travel Insurance Claims Dataset csv file was downloaded from Kaggle. It was visually analyzed to determine what fields would be most useful. The dataset was cleaned with PANDAS in Jupyter Notebook as followed.
+The Travel Insurance Claims Dataset csv file was downloaded from Kaggle. It was visually analyzed to determine what fields would be most useful. The dataset was cleaned with Pandas in Jupyter Notebook as followed:
 
 - Gender column was dropped due the large number of null values.
-- Claim column transformed to 1 for “yes” and 0 for “no”.
-- There were few lines of data with negative and zero values in the Duration column which were dropped. 
-- As per boxplot for Age column there were a many of outliers, but 118 is the only large one. Those lines were dropped as well.
+- Claim column transformed to 1 for “yes” (insurance claimed) and 0 for “no”.
+- There were few rows of data with negative and zero values in the Duration column which were dropped. Also, several rows with duration longer than 600 days were dropped - all huge outliers. 
+- As per boxplot for Age column the biggest outlier was 118 years - those rows were dropped as well.
+- Net Sales and Commission columns were removed to a new DataFrame so our working DataFrame won't be overfitted with unnecessary information.
 
-It was then pulled into PGADMIN. SQL code was used in query tool to successfully create tables. 
+Cleaned dataset was then imported to PostgreSQL. For these purposes `sqlalchemy` module was used to create the database engine to connect Pandas with SQL. Connection to PostgreSQL was also added to the Jupyter Notebook with Machine Learning Model so the dataset could be imported for further analysis. [Quick DBD](https://www.quickdatabasediagrams.com/) online tool was used to create ERD with relationships.
 
-![image_SQL_clean.png](SQL_clean.png)
 
 ## Dashboard
 Tableau will be used as a data visual dashboard for the project. Microsoft Power Point slides will be used for the demo presentation. 
