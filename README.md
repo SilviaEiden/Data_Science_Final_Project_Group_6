@@ -5,7 +5,7 @@ The purpose of this project is to demonstrate the skills we developed over our s
 
 ## Presentation:
 
-https://docs.google.com/presentation/d/15mORnZ5z8yIWXXm1Pm6wAKRais7dHYS29vaFD6OZ9b4/edit?usp=sharing
+Google Slide Link: [Google Presentation](https://docs.google.com/presentation/d/15mORnZ5z8yIWXXm1Pm6wAKRais7dHYS29vaFD6OZ9b4/edit?usp=sharing)
 
 ### Team Members:
 - Liliia Strukova
