@@ -1,2 +1,6 @@
 #Ignore the config.py file.
 config.py
+
+#Ignore the .DS_Store.
+.DS_Store
+
