@@ -60,12 +60,36 @@ Communication venues were set up for the team via Slack, Group text, and Zoom me
 
 ## Machine Learning Model
 
-Since our dataset contains labeled data and we know our output, whether the travel insurance was claimed (1) or not (0), we are going to work with classification model of supervised machine learning. We will use Scikit-learn library to implement a machine learning model in Python. Logistic regression was chosen since this is a popular classification model. It predicts binary outcomes, meaning that there are only two possible outcomes.
+Since our dataset contains labeled data and we know our output, whether the travel insurance was claimed (1) or not (0), we worked with the classification model of supervised machine learning. The classification model's algorithms attempt to learn patterns from the data, and if the model is successful, will gain the ability to make accurate predictions for likelihood of claims.
 
-The dataset was divided into a target and features.  The target is the Claim column and the features are all other columns, beause we want to predict whether or not the person will claim a travel insurance based on different criteria (travel destination, duration, age of insured person, etc.).
+We used Scikit-learn library to implement a machine learning model in Python. Logistic Regression was chosen since this is a popular classification model. It predicts binary outcomes, meaning that there are only two possible outcomes. The dataset was split into training and testing sets for the supervised learning model. The Logistic Regression model learned patterns from the training dataset. It then used the testing dataset to assess its performance.
 
+The dataset was divided into a target and features. The target is the Claim column. The features are all the other columns, because we want to predict whether or not the person will claim a travel insurance based on different criteria (travel destination, duration, age of insured person, etc.).
 Logistics Regression itself gave an accuracy of 98.53% and balanced accuracy score of 50%. This huge difference is because the dataset is not balanced. We can see this also from checking the balance of our target values that show us 61,373 lines of data for not claimed insurance and only 917 lines of data for claimed.
 
+Ensemble decision tree models were then used to see how the accuracy scores could be evaluated further to take into consideration the class imbalance, as well as to take into consideration precision and recall. The concept of ensemble learning is the process of combining multiple models, like decision tree algorithms, to help improve the accuracy and robustness, as well as decrease variance of the model, and therefore increase the overall performance of the model.
+
+The following models were used for testing:
+- RandomForest
+- Adaptive Boosting
+- Random Oversampling
+- SMOTE
+- Random Undersampling
+- Cluster Centroid
+- SMOTEENN
+
+At first run the Balanced Random Forest Classifier, Naive Random Oversampling, and Undersampling models were all considered since they provided the highest scores. Undersampling was then ruled out, because although it had a high Accuracy score, the Recall score was the lowest. It also didn’t seem to fit for our sample count size.
+
+![image_FirstRoundScores.png](FirstRoundScores.png)
+
+
+The models were then re-run after dropping Net Sales and Commission columns and then trying OneHotEncoder and get_dummies functions. The best results were obtained  get_dummies was applied for all models. Using get_dummies converts categorical data into dummy or indicator variables.
+
+![image_ScoresGetDummies.png](ScoresGetDummies.png)
+
+The SMOTE model gave the best results at this point. The original SMOTE Accuracy score was 72.7% and went up to 78.18% after get_dummies was appiled. Balanced  Accuracy, Precision, and Recall scores for SMOTE were then 76.45%, 0.05, and 0.75 respectively.  The SMOTE model was chosen as our model based on these improved scores.
+
+A limitation to considerations when using SMOTE is that, although it reduces the risk of oversampling, it does not always outperform random oversampling. SMOTE also has a vulnerability to outliers and of course sampling techniques cannot overcome the deficiencies of the original dataset.
 
 ## Database
 
