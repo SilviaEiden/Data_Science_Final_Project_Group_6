@@ -89,6 +89,8 @@ Tableau will be used as a data visual dashboard for the project.
 
 Google slides will be used for the demonstation presentation. 
 
+https://docs.google.com/presentation/d/15mORnZ5z8yIWXXm1Pm6wAKRais7dHYS29vaFD6OZ9b4/edit?usp=sharing 
+
 
 
 
