@@ -3,7 +3,7 @@
 ## Purpose
 The purpose of this project is to demonstrate the skills we developed over our six month data visualization bootcamp class.
 
-## Presentation
+## Presentation:
 
 https://docs.google.com/presentation/d/15mORnZ5z8yIWXXm1Pm6wAKRais7dHYS29vaFD6OZ9b4/edit?usp=sharing
 
