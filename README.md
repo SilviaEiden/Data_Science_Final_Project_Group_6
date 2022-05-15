@@ -95,7 +95,7 @@ The SMOTE model gave the best results at this point. The original SMOTE Balanced
 
 The benefit of using SMOTE is that unlike oversampling that is random, with SMOTE new instances are interpolated.  New values that are created are based on values of its closest neighbors. 
 
-A limitation to considerations when using SMOTE is that, although it reduces the risk of oversampling, it does not always outperform random oversampling. SMOTE also has a vulnerability to outliers and of course sampling techniques cannot overcome the deficiencies of the original da
+A limitation to considerations when using SMOTE is that, although it reduces the risk of oversampling, it does not always outperform random oversampling. SMOTE also has a vulnerability to outliers and of course sampling techniques cannot overcome the deficiencies of the original dataset.
 
 ## Database
 
