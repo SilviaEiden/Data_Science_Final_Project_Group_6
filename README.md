@@ -60,6 +60,18 @@ A GitHub Main Branch was created with four branches for team members to contribu
 
 Communication venues were set up for the team via Slack, Group text, and Zoom meetings. Team members were assigned weekly roles and each member committed the results of their tasks to Git Hub.
 
+## Database
+
+The Travel Insurance Claims Dataset csv file was downloaded from Kaggle. It was visually analyzed to determine what fields would be most useful. The dataset was cleaned with Pandas in Jupyter Notebook as followed:
+
+- Gender column was dropped due the large number of null values.
+- Claim column transformed to 1 for “yes” (insurance claimed) and 0 for “no”.
+- There were few rows of data with negative and zero values in the Duration column which were dropped. Also, several rows with duration longer than 600 days were dropped - all huge outliers. 
+- As per boxplot for Age column the biggest outlier was 118 years - those rows were dropped as well.
+- Net Sales and Commission columns were removed to a new DataFrame so our working DataFrame won't be overfitted with unnecessary information.
+
+Cleaned dataset was then imported to PostgreSQL. For these purposes `sqlalchemy` module was used to create the database engine to connect Pandas with SQL. Connection to PostgreSQL was also added to the Jupyter Notebook with Machine Learning Model so the dataset could be imported for further analysis. [Quick DBD](https://www.quickdatabasediagrams.com/) online tool was used to create ERD with relationships.
+
 ## Machine Learning Model
 
 Since our dataset contains labeled data and we know our output, whether the travel insurance was claimed (1) or not (0), we worked with the classification model of supervised machine learning. The classification model's algorithms attempt to learn patterns from the data, and if the model is successful, will gain the ability to make accurate predictions for likelihood of claims.
@@ -97,24 +109,45 @@ The benefit of using SMOTE is that unlike oversampling that is random, with SMOT
 
 A limitation to consider when using SMOTE is that, although it reduces the risk of oversampling, it does not always outperform random oversampling. SMOTE also has a vulnerability to outliers and of course sampling techniques cannot overcome the deficiencies of the original dataset.
 
-## Database
+## Summary and Conclusions
 
-The Travel Insurance Claims Dataset csv file was downloaded from Kaggle. It was visually analyzed to determine what fields would be most useful. The dataset was cleaned with Pandas in Jupyter Notebook as followed:
+From this dataset, we particulary looked to see if there was a relationship and or predictability that travel insurence would have claims based upon travel destination, agency type that sold the insurance, duration of travel, age of insured, or type of sales. Using this dataset, we were not able to find a relationship that would accurately predict the likelihood of plans having claims from the feautures used form the dataset. We did not find any other trends that could be used to predict the likelihood of claims for travel insurance. Although we had a large dataset of 62,290 plans sold, only 1.47% of those sold had a claim. We think that becasue the number of claims was low, we could not find a linear trend to any of the features. However, we think we can glean some information from the data that could be considered for a business plan.
 
-- Gender column was dropped due the large number of null values.
-- Claim column transformed to 1 for “yes” (insurance claimed) and 0 for “no”.
-- There were few rows of data with negative and zero values in the Duration column which were dropped. Also, several rows with duration longer than 600 days were dropped - all huge outliers. 
-- As per boxplot for Age column the biggest outlier was 118 years - those rows were dropped as well.
-- Net Sales and Commission columns were removed to a new DataFrame so our working DataFrame won't be overfitted with unnecessary information.
+Travel duration was the feature had the highest amount of claims. The average travel duration is 48.6 days for sold travel insurance plans and 111.7 days for travel insurance plans that had a claim. With this data we can glean that most of the travel insurance customers were doing long term travel.  This could mean these are long term busines travelers.  More information would be needed to see what countries have laws that center around travel insurance requirements. 
 
-Cleaned dataset was then imported to PostgreSQL. For these purposes `sqlalchemy` module was used to create the database engine to connect Pandas with SQL. Connection to PostgreSQL was also added to the Jupyter Notebook with Machine Learning Model so the dataset could be imported for further analysis. [Quick DBD](https://www.quickdatabasediagrams.com/) online tool was used to create ERD with relationships.
+The average age (bin) of travel insurance buyers is 36 years old who fall in the age bin of 35-39 years old. That represents
+47% of the total travel insurance buyers.  It would be interesing to have more information on this group, such as type of travel (business or pleasure) to see if the theory that these are business travelors.  
 
+The Travel Insurance Dataset is from a third-party travel insurance servicing company that is based in Singapore. As a result, Asia and North America are heavily highlighted with most travel insurance claims in the world map. If we had more time we would have liked to run data specifically on Singapore. 
+
+?Top 10 destinations displayed in graph: “Top 10 Destinations by Sold and Claimed Insurance Plans”?
+
+The distribution channels for the travel insurance plans were 1.6% Offline and 98.4% Online for sold travel insurance plans. Conversely, 1.3% Offline and 98.7% Online for travel insurance plans that had a claim.
+
+The Agency types aggregate for the travel insurance plans was 26.5% Airlines and 73.5% Travel Agency for sold travel insurance plans. Moreover, 64% Airlines and 36% Travel Agency for travel insurance plans that had a claim.
+
+We can tell fromt the large dataset that there is a large market for travel insurance in this area of the world.  Many more inusurance plans were sold that did not have insurance claims than did.  At first glance this seems like an advantageous business opportunity, but much more information is needed on the net sales and monies that need to be expended when claims are made. Although there was information on Net Sales and Commission in the dataset, we chose to remove them becasue we did not have sufficient information on the definitions of the data and did not want to overfit the dataframe with information we did not understand, therefore would not be able to interpet.  
 
 ## Dashboard
 
 Tableau Public Link: [Data Science - Final Project - Group 6]( https://public.tableau.com/views/DataScience-FinalProject-Group6/Story1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
 
 The purpose of this section is to convey a compelling story of the Travel Insurance Dataset through a series of graphs, and by using Tableau Public we can create visualizations that are easy to read and understand. As a team, we determined Tableau Public is a great tool to add value to our final project as it encourages the viewer to interact with the data for further analysis.
+
+The following interactive elements and types of graphs were used to display the Travel Insurance Dataset in Tableau. 
+
+Interactive Elements:
+
+- Checkbox filter
+- Highlight search bar 
+- Hover text and map
+
+Types of Graphs Used:
+
+- Bar charts
+- Pie charts
+- Packed Bubbles
+- World Map
 
 
 
