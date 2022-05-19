@@ -109,30 +109,7 @@ The benefit of using SMOTE is that unlike oversampling that is random, with SMOT
 
 A limitation to consider when using SMOTE is that, although it reduces the risk of oversampling, it does not always outperform random oversampling. SMOTE also has a vulnerability to outliers and of course sampling techniques cannot overcome the deficiencies of the original dataset.
 
-## Summary and Conclusions
-
-Using the travel insurance dataset, we looked particularly to see if there was a relationship and or predictability that travel insurance would have claims filed based upon the following criteria.
-
-- Travel destination 
-- Agency type that sold the insurance
-- Duration of travel
-- Age of insured
-- Type of sales 
-
-However, we were not able to find a relationship that would accurately predict the likelihood of plans having claims filed from the features that we used from this dataset. We did not find any other trends that could be used to predict the likelihood of claims being filed for travel insurance either. Although we had a large dataset of 62,290 plans sold, only 1.47% of those sold had a claim. We think that because the number of claims was so low, we could not find a linear trend to any of the features. However, we think we can glean some information from the data that could be considered for a business plan.
-
-Travel duration was the feature had the highest number of claims. The average travel duration is 48.6 days for sold travel insurance plans and 111.7 days for travel insurance plans that had a claim. With this data we can glean that most of the travel insurance customers were doing long term travel.  This could mean these are long term business travelers.  More information would be needed to see what countries have laws that center around travel insurance requirements. 
-
-The average age of travel insurance buyers is 36 years old who fall in the age bin of 35-39 years old. That represents 47% of the total travel insurance buyers.  It would be interesting to have more information on this group, such as type of travel (business or pleasure) to see if the theory that these are business travelers holds true.  
-
-The Travel Insurance Dataset is from a third-party travel insurance servicing company that is based in Singapore. As a result, Asia and North America are heavily highlighted with most travel insurance claims in the world map. If we had more time, we would have liked to run data specifically on Singapore. 
-
-?Top 10 destinations displayed in graph: “Top 10 Destinations by Sold and Claimed Insurance Plans”?
-
-
-The distribution channels for the travel insurance plans were 1.6% Offline and 98.4% Online for sold travel insurance plans. Conversely, 1.3% Offline and 98.7% Online for travel insurance plans that had a claim. The Agency types aggregate for the travel insurance plans was 26.5% Airlines and 73.5% Travel Agency for sold travel insurance plans. Moreover, 64% Airlines and 36% Travel Agency for travel insurance plans that had a claim. This information couldbe used to decide what venues to invest in for selling the travel insurance.
-
-We can tell from the large dataset that there is a large market for travel insurance in this area of the world.  Many more insurance plans were sold that did not have insurance claims than did.  At first glance this seems like an advantageous business opportunity, but much more information is needed on the net sales and monies that need to be expended when claims are made. Although there was information on Net Sales and Commission in the dataset, we chose to remove them. We did this because we did not have sufficient information on the definitions of the data and did not want to overfit the data frame with information we did not understand, and therefore would not be able to interpret.  Having more information on Net Sales and money expenditure for claims would be the most useful in determining the viability of opening a travel insurance business in this part of the world. 
+![image_SMOTE_Final_Results.png.png](SMOTE_Final_Results.png)
 
 ## Dashboard
 
@@ -154,6 +131,37 @@ The following interactive elements and types of graphs were used to display the 
 - Pie charts
 - Packed Bubbles
 - World Map
+
+
+## Summary and Conclusions
+
+Using the travel insurance dataset, we looked particularly to see if there was a relationship and or predictability that travel insurance would have claims filed based upon the following criteria.
+
+- Travel destination 
+- Agency type that sold the insurance
+- Duration of travel
+- Age of insured
+- Type of sales 
+
+However, we were not able to find a relationship that would accurately predict the likelihood of plans having claims filed from the features that we used from this dataset. We did not find any other trends that could be used to predict the likelihood of claims being filed for travel insurance either. Although we had a large dataset of 62,290 plans sold, only 1.47% of those sold had a claim. We think that because the number of claims was so low, we could not find a linear trend to any of the features. Nevertheless, we think we can glean some information from the data that could be considered for a business plan.
+
+![heatmap](Analysis/heatmap_2.png)
+
+Travel duration was the feature had the highest number of claims. The average travel duration is 48.6 days for sold travel insurance plans and 111.7 days for travel insurance plans that had a claim. With this data we can glean that most of the travel insurance customers were doing long term travel.  This could mean these are long term business travelers.  Having more information to see what countries have laws that center around travel insurance requirements could provide more context.
+
+The average age of travel insurance buyers is 36 years old who fall in the age bin of 35-39 years old. That represents 47% of the total travel insurance buyers.  It would be interesting to have more information on this group, such as type of travel (business or pleasure) to see if the theory that these are business travelers holds true.  
+
+The Travel Insurance Dataset is from a third-party travel insurance servicing company that is based in Singapore. As a result, Asia and North America are heavily highlighted with most travel insurance claims in the world map. If we had more time, we would have liked to run data specifically on Singapore. 
+
+?Top 10 destinations displayed in graph: “Top 10 Destinations by Sold and Claimed Insurance Plans”?
+
+
+The distribution channels columns for the travel insurance plans showed that 1.6% were sold Offline and 98.4% were sold Online. Conversely, 1.3% Offline and 98.7% Online for travel insurance plans that had a claim. The Agency types aggregate for the travel insurance plans was 26.5% Airlines and 73.5% Travel Agency for sold travel insurance plans. Moreover, 64% Airlines and 36% Travel Agency for travel insurance plans that had a claim. This information could be used to decide what venues to invest in for selling the travel insurance.
+
+We can tell from the large dataset that there is a large market for travel insurance in this area of the world.  Many more insurance plans were sold that did not have insurance claims than did.  At first glance this seems like an advantageous business opportunity, but much more information is needed on the net sales and monies that need to be expended when claims are made. Although there was information on Net Sales and Commission in the dataset, we chose to remove them. We did this because we did not have sufficient information on the definitions of the data and did not want to overfit the data frame with information we did not understand, and therefore would not be able to interpret.  Having more information on Net Sales and money expenditure for claims would be most useful in determining the viability of opening a travel insurance business in this part of the world. 
+
+This dataset was from 2019.  It would be really interesting to see how these trends may have changed in our post covid 19 pandemic age. We think travel insurance would be less of an afterthought and more of must during a pandemic. This would be very valuable information to have when deciding whether or not to invest in a travel insurance at this time. 
+
 
 
 
