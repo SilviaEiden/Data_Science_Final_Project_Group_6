@@ -113,18 +113,28 @@ A limitation to consider when using SMOTE is that, although it reduces the risk 
 
 ## Dashboard
 
+Tableau Public Version 2022.1.1
+
 Tableau Public Link: [Data Science - Final Project - Group 6]( https://public.tableau.com/views/DataScience-FinalProject-Group6/Story1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
 
-The purpose of this section is to convey a compelling story of the Travel Insurance Dataset through a series of graphs, and by using Tableau Public we can create visualizations that are easy to read and understand. As a team, we determined Tableau Public is a great tool to add value to our final project as it encourages the viewer to interact with the data for further analysis.
+The purpose of this section is to convey a compelling story of the Travel Insurance Claims Dataset through a series of graphs, and by using Tableau Public we can create visualizations that are easy to read and understand. As a team, we determined Tableau Public is a great tool to add value to our final project as it encourages the viewer to interact with the data for further analysis.
 
-The following interactive elements and types of graphs were used to display the Travel Insurance Dataset in Tableau. 
+The Travel Insurance Claims data story includes the following five story points:
+
+1.	Key Points
+2.	World Map
+3.	Destination & Duration
+4.	Age Distribution & Travel Insurance Plans
+5.	Machine Learning Model Selection Timeline
+
+The following features were used to display the Travel Insurance Claims Dataset in Tableau Public. 
 
 ### Interactive Elements:
 - Checkbox filter
 - Highlight search bar 
 - Hover text and map
 
-### Types of Graphs Used:
+### Types of Graphs and Charts Used:
 - Bar charts
 - Pie charts
 - Packed Bubbles
