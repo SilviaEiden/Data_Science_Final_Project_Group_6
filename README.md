@@ -50,13 +50,11 @@ Answers to these questions can be used to determine sales strategies for areas t
 
 ## GitHub
 
-A GitHub Main Branch was created with four branches for team members to contribute to, based on the portion of the project being worked on.  The following branches were created and each team member was to have at least four commits from the duration of the first segment.
+A GitHub repository was started for the team to contribute and collaborate based on the portion of the final project being worked on. Each team member was to have at least four commits per segment to keep track of the work that had to be done. Below is a list of six branches created for the Data Science Final Project Group 6.
 
-![image_GitHubBranches.png](GitHubBranches.png)
-
-### Description of the communication protocols:
-
-Communication venues were set up for the team via Slack, Group text, and Zoom meetings. Team members were assigned weekly roles and each member committed the results of their tasks to Git Hub.
+<p float="left">
+  <img src="GitHub_UpdatedBranches.png" width="300" height="400" />
+</p>
 
 ## Database
 
