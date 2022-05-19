@@ -17,7 +17,7 @@ Google Slide Link: [Google Presentation](https://docs.google.com/presentation/d/
 Travel insurance claims. 
  
 ### Reason: 
-The travel insurance claims dataset was chosen to investigate business opportunities to sell travel insurance. We can investigate the pros and cons of investing in this type of business and gain insight into the market's trends.  We can use Machine Learning to gauge the accuracy of the dataset to see if it can be used to develop a business model plan. 
+The travel insurance claims dataset was chosen to investigate business opportunities to sell travel insurance. We wanted to investigate the pros and cons of investing in this type of business and gain insight into the market's trends. We used Machine Learning to gauge the accuracy of the dataset to see if it can be used to develop a business model plan. 
 
 ### Description of the Data:
 
@@ -36,25 +36,23 @@ The following attributes are contained in the dataset:
 - Gender of insured (Gender)
 - Age of insured (Age)
 
-### Questions we hope to answer:
+### Questions we looked to answer:
 
-- Is there a relationship between travel destination and insurance claims?
-- Is there a relationship between type of travel insurance agencies and insurance claims?
-- Is there a relationship between duration of travel and insurance claims?
-- Is there a relationship between age of insured and insurance claims?
+- Is there a relationship between insurance claims and travel destination?
+- Is there a relationship between insurance claims and type of travel insurance agencies?
+- Is there a relationship between insurance claims and duration of travel?
+- Is there a relationship between insurance claims and age of the insured?
 - Can these data points be used to accurately predict insurance claims?
 - Does type of sales (i.e.: online, product) affect claims or the amount of insurance sold?
 - Are there any other trends that could be used to determine the likelihood of insurance claims being filed?
 
 Answers to these questions can be used to determine sales strategies for areas that are lacking, risky areas to sell travel insurance and if the business is a worthwhile investment. 
 
-
 ## GitHub
 
 A GitHub Main Branch was created with four branches for team members to contribute to, based on the portion of the project being worked on.  The following branches were created and each team member was to have at least four commits from the duration of the first segment.
 
 ![image_GitHubBranches.png](GitHubBranches.png)
-
 
 ### Description of the communication protocols:
 
@@ -66,17 +64,19 @@ The Travel Insurance Claims Dataset csv file was downloaded from Kaggle. It was 
 
 - Gender column was dropped due the large number of null values.
 - Claim column transformed to 1 for “yes” (insurance claimed) and 0 for “no”.
-- There were few rows of data with negative and zero values in the Duration column which were dropped. Also, several rows with duration longer than 600 days were dropped - all huge outliers. 
-- As per boxplot for Age column the biggest outlier was 118 years - those rows were dropped as well.
-- Net Sales and Commission columns were removed to a new DataFrame so our working DataFrame won't be overfitted with unnecessary information.
+- There were a few rows of data with negative and zero values in the Duration column which were dropped. 
+- Several rows with duration longer than 600 days were dropped - all huge outliers. 
+- As per the boxplot for Age column the biggest outlier was 118 years - those rows were dropped.
+- Net Sales and Commission columns were removed to a new DataFrame so our working DataFrame wouldn't be overfitted with unnecessary information.
 
-Cleaned dataset was then imported to PostgreSQL. For these purposes `sqlalchemy` module was used to create the database engine to connect Pandas with SQL. Connection to PostgreSQL was also added to the Jupyter Notebook with Machine Learning Model so the dataset could be imported for further analysis. [Quick DBD](https://www.quickdatabasediagrams.com/) online tool was used to create ERD with relationships.
+The cleaned dataset was then imported to PostgreSQL. For these purposes `sqlalchemy` module was used to create the database engine to connect Pandas with SQL. Connection to PostgreSQL was also added to the Jupyter Notebook with Machine Learning Model so the dataset could be imported for further analysis. [Quick DBD](https://www.quickdatabasediagrams.com/) online tool was used to create ERD with relationships.
 
 ## Machine Learning Model
 
-Since our dataset contains labeled data and we know our output, whether the travel insurance was claimed (1) or not (0), we worked with the classification model of supervised machine learning. The classification model's algorithms attempt to learn patterns from the data, and if the model is successful, will gain the ability to make accurate predictions for likelihood of claims.
+Since our dataset contains labeled data and we knew our output, whether the travel insurance was claimed (1) or not (0), we worked with the classification model of supervised machine learning. The classification model's algorithms attempt to learn patterns from the data, and if the model is successful, will gain the ability to make accurate predictions for likelihood of claims.
 
 The dataset was divided into a target and features. The target is the Claim column. The features are all the other columns, because we want to predict whether the person will claim a travel insurance based on different criteria (travel destination, duration, age of insured person, etc.).
+
 We used Scikit-learn library to implement a machine learning model in Python. Logistic Regression was chosen since this is a popular classification model. It predicts binary outcomes, meaning that there are only two possible outcomes. The dataset was split into training and testing sets for the supervised learning model. The dataset was split using train_test_split module with 75% of training data and 25% of testing data. The Logistic Regression model learned patterns from the training dataset. It then used the testing dataset to assess its performance.
 
 Logistics Regression itself gave an accuracy of 98.53% and balanced accuracy score of 50%. This huge difference is because the dataset is not balanced. We can see this also from checking the balance of our target values that show us 61,373 lines of data for not claimed insurance and only 917 lines of data for claimed.
@@ -105,11 +105,11 @@ Looking at these results RandomForest shows recall of 0.79, however Accuracy is 
 
 The SMOTE model gave the best results at this point. The original SMOTE Balanced Accuracy score was 72.7% and went up to 76.5% after get_dummies and standard scaling was applied.  Accuracy, Precision, and Recall scores for SMOTE were then 78.2%, 0.05, and 0.75 respectively.  The SMOTE model was chosen as our model based on these improved scores.
 
+![image_SMOTE_Final_Results.png.png](SMOTE_Final_Results.png)
+
 The benefit of using SMOTE is that unlike oversampling that is random, with SMOTE new instances are interpolated.  New values that are created are based on values of its closest neighbors. 
 
 A limitation to consider when using SMOTE is that, although it reduces the risk of oversampling, it does not always outperform random oversampling. SMOTE also has a vulnerability to outliers and of course sampling techniques cannot overcome the deficiencies of the original dataset.
-
-![image_SMOTE_Final_Results.png.png](SMOTE_Final_Results.png)
 
 ## Dashboard
 
@@ -120,47 +120,45 @@ The purpose of this section is to convey a compelling story of the Travel Insura
 The following interactive elements and types of graphs were used to display the Travel Insurance Dataset in Tableau. 
 
 ### Interactive Elements:
-
 - Checkbox filter
 - Highlight search bar 
 - Hover text and map
 
 ### Types of Graphs Used:
-
 - Bar charts
 - Pie charts
 - Packed Bubbles
 - World Map
 
-
-## Summary and Conclusions
-
-Using the travel insurance dataset, we looked particularly to see if there was a relationship and or predictability that travel insurance would have claims filed based upon the following criteria.
-
+## Summary  
+Using the travel insurance dataset, we looked particularly to see if there was a relationship and or predictability that travel insurance would have claims filed based upon any of the following criteria.
 - Travel destination 
 - Agency type that sold the insurance
 - Duration of travel
 - Age of insured
 - Type of sales 
 
-However, we were not able to find a relationship that would accurately predict the likelihood of plans having claims filed from the features that we used from this dataset. We did not find any other trends that could be used to predict the likelihood of claims being filed for travel insurance either. Although we had a large dataset of 62,290 plans sold, only 1.47% of those sold had a claim. We think that because the number of claims was so low, we could not find a linear trend to any of the features. Nevertheless, we think we can glean some information from the data that could be considered for a business plan.
+However, we were not able to find a relationship that would accurately predict the likelihood of plans having claims filed from the features that we used from this dataset. We did not find any other trends that could be used to predict the likelihood of claims being filed for travel insurance either. Although we had a large dataset of 62,290 plans sold, only 1.47% of those sold had a claim. We think that because the number of claims was so low, we could not find a linear trend to any of the features. Nevertheless, we think we can glean some information from the data that could be considered of use in a business plan with further analysis.
 
 ![heatmap](Analysis/heatmap_2.png)
 
-Travel duration was the feature had the highest number of claims. The average travel duration is 48.6 days for sold travel insurance plans and 111.7 days for travel insurance plans that had a claim. With this data we can glean that most of the travel insurance customers were doing long term travel.  This could mean these are long term business travelers.  Having more information to see what countries have laws that center around travel insurance requirements could provide more context.
+Travel duration was the feature that had the highest number of claims. The average travel duration is 48.6 days for sold travel insurance plans and 111.7 days for travel insurance plans that had a claim. With this data we can glean that most of the travel insurance customers were doing long term travel.  This could mean these are long term business travelers.  Having more information, like knowing what countries have laws that center around travel insurance requirements, could provide more context.
 
 The average age of travel insurance buyers is 36 years old who fall in the age bin of 35-39 years old. That represents 47% of the total travel insurance buyers.  It would be interesting to have more information on this group, such as type of travel (business or pleasure) to see if the theory that these are business travelers holds true.  
 
-The Travel Insurance Dataset is from a third-party travel insurance servicing company that is based in Singapore. As a result, Asia and North America are heavily highlighted with most travel insurance claims in the world map. If we had more time, we would have liked to run data specifically on Singapore. 
+The Travel Insurance Dataset is from a third-party travel insurance servicing company that is based in Singapore. As a result, Asia and North America are heavily highlighted with most travel insurance claims in the world map. If we had more time, we would have to run data specifically on Singapore. Singapore had the largest and most disproportionate share of travel insurnance plans sold and claimed. 
 
-?Top 10 destinations displayed in graph: “Top 10 Destinations by Sold and Claimed Insurance Plans”?
+![image_World_map.png](World_map.png)
 
+The Distribution Channels column, for the travel insurance plans sold, showed that 1.6% were sold Offline and 98.4% were sold Online. Conversely, for travel insurance plans that had a claim 1.3% were sold Offline and 98.7% were sold Online. The Agency Types aggregate for the travel insurance plans was 26.5% Airlines and 73.5% Travel Agency for sold travel insurance plans. Moreover, for travel insurance plans that had a claim, 64% were from Airlines and 36% were from a Travel Agency. This information could be used to decide what venues to invest in for the selling of travel insurance.
 
-The distribution channels columns for the travel insurance plans showed that 1.6% were sold Offline and 98.4% were sold Online. Conversely, 1.3% Offline and 98.7% Online for travel insurance plans that had a claim. The Agency types aggregate for the travel insurance plans was 26.5% Airlines and 73.5% Travel Agency for sold travel insurance plans. Moreover, 64% Airlines and 36% Travel Agency for travel insurance plans that had a claim. This information could be used to decide what venues to invest in for selling the travel insurance.
+## Conclusion and Thoughts
 
-We can tell from the large dataset that there is a large market for travel insurance in this area of the world.  Many more insurance plans were sold that did not have insurance claims than did.  At first glance this seems like an advantageous business opportunity, but much more information is needed on the net sales and monies that need to be expended when claims are made. Although there was information on Net Sales and Commission in the dataset, we chose to remove them. We did this because we did not have sufficient information on the definitions of the data and did not want to overfit the data frame with information we did not understand, and therefore would not be able to interpret.  Having more information on Net Sales and money expenditure for claims would be most useful in determining the viability of opening a travel insurance business in this part of the world. 
+We can tell from the large dataset that there is a large market for travel insurance in this area of the world.  Many more insurance plans were sold that did not have insurance claims than did.  At first glance this seems like an advantageous business opportunity, but much more information is needed on the net sales and monies that need to be expended when claims are filed. Although there was information on Net Sales and Commission in the dataset, we chose to remove those features. We did this because we did not have sufficient information on the definitions of the data and did not want to overfit the data frame with information we did not understand, and therefore would not be able to interpret.  Having more information on Net Sales and money expenditure for claims would be most useful in determining the viability of opening a travel insurance business in this part of the world. 
 
-This dataset was from 2019.  It would be really interesting to see how these trends may have changed in our post covid 19 pandemic age. We think travel insurance would be less of an afterthought and more of must during a pandemic. This would be very valuable information to have when deciding whether or not to invest in a travel insurance at this time. 
+This dataset was from 2019.  It would be really interesting to see how these trends may have changed in our post covid 19 pandemic age. We think travel insurance would be less of an afterthought and more of must during a pandemic. This would be very valuable information to have when deciding whether or not to invest in a travel insurance business at this time. 
+
+In conclusion, we found that not much was predictable from the Travel Insurance Dataset. However, it did show us areas of interest that could be further investigated to pursue such information in the future. At this point investing in a Travel Insurance business for us seems about as volatile as trying to decide whether or not to buy travel insurance for our next vacation.  
 
 
 
