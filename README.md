@@ -117,7 +117,7 @@ Tableau Public Version 2022.1.1
 
 Tableau Public Link: [Data Science - Final Project - Group 6]( https://public.tableau.com/views/DataScience-FinalProject-Group6/Story1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
 
-The purpose of this section is to convey a compelling story of the Travel Insurance Claims Dataset through a series of graphs, and by using Tableau Public we can create visualizations that are easy to read and understand. As a team, we determined Tableau Public is a great tool to add value to our final project as it encourages the viewer to interact with the data for further analysis.
+The purpose of this section is to convey a compelling data story of the Travel Insurance Claims Dataset through a series of graphs and charts, and by using Tableau Public we can create visualizations that are easy to read and understand. As a team, we determined Tableau Public is a great tool to add value to the final project as it encourages the viewer to interact with the data for further analysis.
 
 The Travel Insurance Claims data story includes the following five story points:
 
