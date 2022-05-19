@@ -107,7 +107,7 @@ The SMOTE model gave the best results at this point. The original SMOTE Balanced
 
 ![image_SMOTE_Final_Results.png.png](SMOTE_Final_Results.png)
 
-The benefit of using SMOTE is that unlike oversampling that is random, with SMOTE new instances are interpolated.  New values that are created are based on values of its closest neighbors. 
+The benefit of using SMOTE is that, unlike oversampling which is random, with SMOTE new instances are interpolated.  New values that are created are based on values of its closest neighbors. 
 
 A limitation to consider when using SMOTE is that, although it reduces the risk of oversampling, it does not always outperform random oversampling. SMOTE also has a vulnerability to outliers and of course sampling techniques cannot overcome the deficiencies of the original dataset.
 
@@ -130,7 +130,7 @@ The following interactive elements and types of graphs were used to display the 
 - Packed Bubbles
 - World Map
 
-## Summary  
+## Results Summary  
 Using the travel insurance dataset, we looked particularly to see if there was a relationship and or predictability that travel insurance would have claims filed based upon any of the following criteria.
 - Travel destination 
 - Agency type that sold the insurance
