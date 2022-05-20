@@ -1,1 +1,1 @@
-API KEY = 'password'
+db_password = 'password from postgreSQL database'
