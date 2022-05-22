@@ -1,7 +1,7 @@
 # Data Science Final Project Group 6
 
 ## Purpose
-The purpose of this project is to demonstrate the skills we developed over our six month data visualization bootcamp class.
+The purpose of this project is to demonstrate the skills we developed over our six-month data visualization bootcamp class.
 
 ## Presentation:
 
@@ -13,11 +13,11 @@ Google Slide Link: [Google Presentation](https://docs.google.com/presentation/d/
 - Hina Mahboob
 - Maureen Hubka
 
-### Selected topic: 
-Travel insurance claims. 
+### Selected topic:
+Travel insurance claims.
  
-### Reason: 
-The travel insurance claims dataset was chosen to investigate business opportunities to sell travel insurance. We wanted to investigate the pros and cons of investing in this type of business and gain insight into the market's trends. We used Machine Learning to gauge the accuracy of the dataset to see if it can be used to develop a business model plan. 
+### Reason:
+The travel insurance claims dataset was chosen to investigate business opportunities to sell travel insurance. We wanted to investigate the pros and cons of investing in this type of business and gain insight into the market's trends. We used Machine Learning to gauge the accuracy of the dataset to see if it can be used to develop a business model plan.
 
 ### Description of the Data:
 
@@ -46,14 +46,14 @@ The following attributes are contained in the dataset:
 - Does type of sales (i.e.: online, product) affect claims or the amount of insurance sold?
 - Are there any other trends that could be used to determine the likelihood of insurance claims being filed?
 
-Answers to these questions can be used to determine sales strategies for areas that are lacking, risky areas to sell travel insurance and if the business is a worthwhile investment. 
+Answers to these questions can be used to determine sales strategies for areas that are lacking, risky areas to sell travel insurance and if the business is a worthwhile investment.
 
 ## GitHub
 
 A GitHub repository was started for the team to contribute and collaborate based on the portion of the final project being worked on. Each team member was to have at least four commits per segment to keep track of the work that had to be done. Below is a list of six branches created for the Data Science Final Project Group 6.
 
 <p float="left">
-  <img src="Resources/GitHub_UpdatedBranches.png" width="300" height="400" />
+  <img src="Resources/GitHub_UpdatedBranches.png" width="300" height="400">
 </p>
 
 ## Database
@@ -62,8 +62,8 @@ The Travel Insurance Claims Dataset csv file was downloaded from Kaggle. It was 
 
 - Gender column was dropped due the large number of null values.
 - Claim column transformed to 1 for “yes” (insurance claimed) and 0 for “no”.
-- There were a few rows of data with negative and zero values in the Duration column which were dropped. 
-- Several rows with duration longer than 600 days were dropped - all huge outliers. 
+- There were a few rows of data with negative and zero values in the Duration column which were dropped.
+- Several rows with duration longer than 600 days were dropped - all huge outliers.
 - As per the boxplot for Age column the biggest outlier was 118 years - those rows were dropped.
 - Net Sales and Commission columns were removed to a new DataFrame so our working DataFrame wouldn't be overfitted with unnecessary information.
 
@@ -90,22 +90,22 @@ The following models were used for testing:
 - Cluster Centroid
 - SMOTEENN
 
-At first run, as a preprocessing step, we used  get_dummies encoder.  The Balanced Random Forest Classifier, Naive Random Oversampling, and Undersampling models were all considered since they provided the highest scores. Undersampling was then ruled out, because although it had a high Balanced Accuracy score, the Recall score was the lowest. 
+At first run, as a preprocessing step, we used get_dummies encoder. The Balanced Random Forest Classifier, Naive Random Oversampling, and Undersampling models were all considered since they provided the highest scores. Undersampling was then ruled out, because although it had a high Balanced Accuracy score, the Recall score was the lowest.
 
 ![image_FirstRoundScores.png](Analysis/FirstRoundScores.png)
 
 
-The models were then re-run trying OneHotEncoder and LabelEncoder methods, which lowered the scores. The best results were obtained  when get_dummies was applied for all models. Using get_dummies converts categorical data into dummy or indicator variables.  Standard scaler was then applied, and the data was re-run. Variables that are measured at different scales do not contribute equally to the model fitting and model learned function which might end up creating a bias. To deal with this potential problem StandardScaler() module was applied prior to model fitting. Standard scaler improved the scores even more.
+The models were then re-run trying OneHotEncoder and LabelEncoder methods, which lowered the scores. The best results were obtained when get_dummies was applied for all models. Using get_dummies converts categorical data into dummy or indicator variables. Standard scaler was then applied, and the data was re-run. Variables that are measured at different scales do not contribute equally to the model fitting and model learned function which might end up creating a bias. To deal with this potential problem StandardScaler() module was applied prior to model fitting. Standard scaler improved the scores even more.
 
 ![image_ScoresGetDummies.png](Analysis/ScoresGetDummies.png)
 
-Looking at these results RandomForest shows recall of 0.79, however Accuracy is only 71.92% and the difference between Accuracy and Balanced Accuracy is higher versus other models. The accuracy score is lower than the threshold of 75%.  The Balanced Accuracy score for Random Oversampling  and recall decreased from 76.7% to 76.3 and 0.75 to 0.73 respectively. 
+Looking at these results RandomForest shows recall of 0.79, however Accuracy is only 71.92% and the difference between Accuracy and Balanced Accuracy is higher versus other models. The accuracy score is lower than the threshold of 75%. The Balanced Accuracy score for Random Oversampling and recall decreased from 76.7% to 76.46% and 0.75 to 0.73 respectively.
 
-The SMOTE model gave the best results at this point. The original SMOTE Balanced Accuracy score was 72.7% and went up to 76.5% after get_dummies and standard scaling was applied.  Accuracy, Precision, and Recall scores for SMOTE were then 78.2%, 0.05, and 0.75 respectively.  The SMOTE model was chosen as our model based on these improved scores.
+The SMOTE model gave the best results at this point. The original SMOTE Balanced Accuracy score was 72.7% and went up to 76.5% after get_dummies and standard scaling was applied. Accuracy, Precision, and Recall scores for SMOTE were then 78.2%, 0.05, and 0.75 respectively. The SMOTE model was chosen as our model based on these improved scores.
 
 ![image_SMOTE_Final_Results.png.png](Analysis/SMOTE_Final_Results.png)
 
-The benefit of using SMOTE is that, unlike oversampling which is random, with SMOTE new instances are interpolated.  New values that are created are based on values of its closest neighbors. 
+The benefit of using SMOTE is that, unlike oversampling which is random, with SMOTE new instances are interpolated. New values that are created are based on values of its closest neighbors.
 
 A limitation to consider when using SMOTE is that, although it reduces the risk of oversampling, it does not always outperform random oversampling. SMOTE also has a vulnerability to outliers and of course sampling techniques cannot overcome the deficiencies of the original dataset.
 
@@ -125,11 +125,11 @@ The Travel Insurance Claims data story includes the following five story points:
 4.	Age Distribution & Travel Insurance Plans
 5.	Machine Learning Model Selection Timeline
 
-The following features were used to display the Travel Insurance Claims Dataset in Tableau Public. 
+The following features were used to display the Travel Insurance Claims Dataset in Tableau Public.
 
 ### Interactive Elements:
 - Checkbox filter
-- Highlight search bar 
+- Highlight search bar
 - Hover text and map
 
 ### Types of Graphs and Charts Used:
@@ -138,23 +138,25 @@ The following features were used to display the Travel Insurance Claims Dataset 
 - Packed Bubbles
 - World Map
 
-## Results Summary  
+## Results Summary
 Using the travel insurance dataset, we looked particularly to see if there was a relationship and or predictability that travel insurance would have claims filed based upon any of the following criteria.
-- Travel destination 
+- Travel destination
 - Agency type that sold the insurance
 - Duration of travel
 - Age of insured
-- Type of sales 
+- Type of sales
 
 However, we were not able to find a relationship that would accurately predict the likelihood of plans having claims filed from the features that we used from this dataset. We did not find any other trends that could be used to predict the likelihood of claims being filed for travel insurance either. Although we had a large dataset of 62,290 plans sold, only 1.47% of those sold had a claim. We think that because the number of claims was so low, we could not find a linear trend to any of the features. Nevertheless, we think we can glean some information from the data that could be considered of use in a business plan with further analysis.
 
-![heatmap](Analysis/heatmap_2.png)
+<p float="left">
+  <img src="Analysis/heatmap_2.png" width="409" height="426">
+</p>
 
-Travel duration was the feature that had the highest number of claims. The average travel duration is 48.6 days for sold travel insurance plans and 111.7 days for travel insurance plans that had a claim. With this data we can glean that most of the travel insurance customers were doing long term travel.  This could mean these are long term business travelers.  Having more information, like knowing what countries have laws that center around travel insurance requirements, could provide more context.
+Travel duration was the feature that had the highest number of claims. The average travel duration is 48.6 days for sold travel insurance plans and 111.7 days for travel insurance plans that had a claim. With this data we can glean that most of the travel insurance customers were doing long term travel. This could mean these are long term business travelers. Having more information, like knowing what countries have laws that center around travel insurance requirements, could provide more context.
 
-The average age of travel insurance buyers is 36 years old who fall in the age bin of 35-39 years old. That represents 47% of the total travel insurance buyers.  It would be interesting to have more information on this group, such as type of travel (business or pleasure) to see if the theory that these are business travelers holds true.  
+The average age of travel insurance buyers is 36 years old who fall in the age bin of 35-39 years old. That represents 47% of the total travel insurance buyers. It would be interesting to have more information on this group, such as type of travel (business or pleasure) to see if the theory that these are business travelers holds true.
 
-The Travel Insurance Dataset is from a third-party travel insurance servicing company that is based in Singapore. As a result, Asia and North America are heavily highlighted with most travel insurance claims in the world map. If we had more time, we would have to run data specifically on Singapore. Singapore had the largest and most disproportionate share of travel insurnance plans sold and claimed. 
+The Travel Insurance Dataset is from a third-party travel insurance servicing company that is based in Singapore. As a result, Asia and North America are heavily highlighted with most travel insurance claims in the world map. If we had more time, we would have to run data specifically on Singapore. Singapore had the largest and most disproportionate share of travel insurance plans sold and claimed.
 
 ![image_World_map.png](Images_for_Google_Slides/World_map.png)
 
@@ -162,13 +164,8 @@ The Distribution Channels column, for the travel insurance plans sold, showed th
 
 ## Conclusion and Thoughts
 
-We can tell from the large dataset that there is a large market for travel insurance in this area of the world.  Many more insurance plans were sold that did not have insurance claims than did.  At first glance this seems like an advantageous business opportunity, but much more information is needed on the net sales and monies that need to be expended when claims are filed. Although there was information on Net Sales and Commission in the dataset, we chose to remove those features. We did this because we did not have sufficient information on the definitions of the data and did not want to overfit the data frame with information we did not understand, and therefore would not be able to interpret.  Having more information on Net Sales and money expenditure for claims would be most useful in determining the viability of opening a travel insurance business in this part of the world. 
+We can tell from the large dataset that there is a large market for travel insurance in this area of the world. Many more insurance plans were sold that did not have insurance claims than did. At first glance this seems like an advantageous business opportunity, but much more information is needed on the net sales and monies that need to be expended when claims are filed. Although there was information on Net Sales and Commission in the dataset, we chose to remove those features. We did this because we did not have sufficient information on the definitions of the data and did not want to overfit the data frame with information we did not understand, and therefore would not be able to interpret. Having more information on Net Sales and money expenditure for claims would be most useful in determining the viability of opening a travel insurance business in this part of the world.
 
-This dataset was from 2019.  It would be really interesting to see how these trends may have changed in our post covid 19 pandemic age. We think travel insurance would be less of an afterthought and more of must during a pandemic. This would be very valuable information to have when deciding whether or not to invest in a travel insurance business at this time. 
+This dataset was from 2019. It would be really interesting to see how these trends may have changed in our post COVID-19 pandemic age. We think travel insurance would be less of an afterthought and more of must during a pandemic. This would be very valuable information to have when deciding whether or not to invest in a travel insurance business at this time.
 
-In conclusion, we found that not much was predictable from the Travel Insurance Dataset. However, it did show us areas of interest that could be further investigated to pursue such information in the future. At this point investing in a Travel Insurance business for us seems about as volatile as trying to decide whether or not to buy travel insurance for our next vacation.  
-
-
-
-
-
+In conclusion, we found that not much was predictable from the Travel Insurance Dataset. However, it did show us areas of interest that could be further investigated to pursue such information in the future. At this point investing in a Travel Insurance business for us seems about as volatile as trying to decide whether or not to buy travel insurance for our next vacation.
