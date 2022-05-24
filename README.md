@@ -155,8 +155,8 @@ The purpose of this section is to convey a compelling data story of the Travel I
 The Travel Insurance Claims data story includes the following five story points:
 
 1.	Key Points
-2.	Travel Destination
-3.	Travel Duration
+2.	World Map
+3. Destination & Duration
 4.	Age Distribution & Travel Insurance Plans
 5.	Machine Learning Model Selection Timeline
 
@@ -181,7 +181,7 @@ Using the travel insurance dataset, we looked particularly to see if there was a
 - Age of insured
 - Type of sales
 
-However, we were not able to find a relationship that would accurately predict the likelihood of plans having claims filed from the features that we used from this dataset. We did not find any other trends that could be used to predict the likelihood of claims being filed for travel insurance either. Although we had a large dataset of 62,290 plans sold, only 1.47% of those sold had a claim. We think that because the number of claims was so low, we could not find a linear trend to any of the features. Nevertheless, we think we can glean some information from the data that could be considered of use in a business plan with further analysis.
+No, we were not able to find a relationship between the features and the output of this dataset, but the model was able to make predictions based on all features. We did not find any other trends that could be used to predict the likelihood of claims being filed for travel insurance either. Although we had a large dataset of 62,290 plans sold, only 1.47% of those sold had a claim. We think that because the number of claims was so low, we could not find a linear trend to any of the features. Nevertheless, we think we can glean some information from the data that could be considered of use in a business plan with further analysis.
 
 <p float="left">
   <img src="Analysis/heatmap_2.png" width="409" height="426">
@@ -203,4 +203,4 @@ We can tell from the large dataset that there is a large market for travel insur
 
 This dataset was from 2019. It would be really interesting to see how these trends may have changed in our post COVID-19 pandemic age. We think travel insurance would be less of an afterthought and more of must during a pandemic. This would be very valuable information to have when deciding whether or not to invest in a travel insurance business at this time.
 
-In conclusion, we found that not much was predictable from the Travel Insurance Dataset. However, it did show us areas of interest that could be further investigated to pursue such information in the future. At this point investing in a Travel Insurance business for us seems about as volatile as trying to decide whether or not to buy travel insurance for our next vacation.
+In conclusion, although we were not able to find a relationship between the features and the output of this dataset, the model was able to make predictions based on all features.  It also showed us areas of interest that could be further investigated to pursue more information in the future. At this point investing in a Travel Insurance business for us seems about as volatile as trying to decide whether or not to buy travel insurance for our next vacation.
