@@ -120,19 +120,19 @@ The purpose of this section is to convey a compelling data story of the Travel I
 The Travel Insurance Claims data story includes the following five story points:
 
 1.	Key Points
-2.	World Map
-3.	Destination & Duration
+2.	Travel Destination
+3.	Travel Duration
 4.	Age Distribution & Travel Insurance Plans
 5.	Machine Learning Model Selection Timeline
 
 The following features were used to display the Travel Insurance Claims Dataset in Tableau Public.
 
-### Interactive Elements:
+Interactive Elements:
 - Checkbox filter
 - Highlight search bar
 - Hover text and map
 
-### Types of Graphs and Charts Used:
+Types of Graphs and Charts Used:
 - Bar charts
 - Pie charts
 - Packed Bubbles
