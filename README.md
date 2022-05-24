@@ -48,6 +48,37 @@ The following attributes are contained in the dataset:
 
 Answers to these questions can be used to determine sales strategies for areas that are lacking, risky areas to sell travel insurance and if the business is a worthwhile investment.
 
+### Technology Used
+
+**Programming language:** Python
+
+**Libraries:**
+
+- Pandas – library for data manipulation and analysis;
+- NumPy – library that performs numerical calculations;
+- SQLAlchemy – library that facilitates the communication between Python programs and databases;
+- Psycopg2 – a PostgreSQL database driver, it is used to perform operations on PostgreSQL using Python;
+- Matplotlib – plotting library;
+- Seaborn – a Python data visualization library based on matplotlib;
+- Scikit-learn – a software machine learning library;
+- Imbalanced-learn – library provides tools when dealing with classification with imbalanced classes.
+
+**Tools and methods:**
+
+- LabelEncoder – tool for encoding the levels of categorical data into numerical data;
+- OneHotEncoder – tool for encoding the levels of categorical data into numerical data;
+- pd.get_dummies() – Pandas method used for data manipulation. It converts categorical data into dummy or indicator variables;
+- StandardScaler – module to scale data. It standardizes the data such that its distribution will have a mean value 0 and standard deviation of 1;
+- Quick DBD – online tool to create ERD with relationships.
+
+**Software:**
+
+- PostgreSQL - relational database system;
+- pgAdmin – GUI (Graphical User Interface) tool used to interact with the Postgres database sessions;
+- Tableau - data visualization software;
+- Google Slides - online presentation app that lets create and format presentations.
+
+
 ## GitHub
 
 A GitHub repository was started for the team to contribute and collaborate based on the portion of the final project being worked on. Each team member was to have at least four commits per segment to keep track of the work that had to be done. Below is a list of six branches created for the Data Science Final Project Group 6.
@@ -68,6 +99,10 @@ The Travel Insurance Claims Dataset csv file was downloaded from Kaggle. It was 
 - Net Sales and Commission columns were removed to a new DataFrame so our working DataFrame wouldn't be overfitted with unnecessary information.
 
 The cleaned dataset was then imported to PostgreSQL. For these purposes `sqlalchemy` module was used to create the database engine to connect Pandas with SQL. Connection to PostgreSQL was also added to the Jupyter Notebook with Machine Learning Model so the dataset could be imported for further analysis. [Quick DBD](https://www.quickdatabasediagrams.com/) online tool was used to create ERD with relationships.
+
+<p float="left">
+  <img src="Database/travel_insuranceDB.png" width="500" height="350">
+</p>
 
 ## Machine Learning Model
 
@@ -120,19 +155,19 @@ The purpose of this section is to convey a compelling data story of the Travel I
 The Travel Insurance Claims data story includes the following five story points:
 
 1.	Key Points
-2.	World Map
-3.	Destination & Duration
+2.	Travel Destination
+3.	Travel Duration
 4.	Age Distribution & Travel Insurance Plans
 5.	Machine Learning Model Selection Timeline
 
 The following features were used to display the Travel Insurance Claims Dataset in Tableau Public.
 
-### Interactive Elements:
+Interactive Elements:
 - Checkbox filter
 - Highlight search bar
 - Hover text and map
 
-### Types of Graphs and Charts Used:
+Types of Graphs and Charts Used:
 - Bar charts
 - Pie charts
 - Packed Bubbles
