@@ -100,6 +100,10 @@ The Travel Insurance Claims Dataset csv file was downloaded from Kaggle. It was 
 
 The cleaned dataset was then imported to PostgreSQL. For these purposes `sqlalchemy` module was used to create the database engine to connect Pandas with SQL. Connection to PostgreSQL was also added to the Jupyter Notebook with Machine Learning Model so the dataset could be imported for further analysis. [Quick DBD](https://www.quickdatabasediagrams.com/) online tool was used to create ERD with relationships.
 
+<p float="left">
+  <img src="Database/travel_insuranceDB.png" width="500" height="350">
+</p>
+
 ## Machine Learning Model
 
 Since our dataset contains labeled data and we knew our output, whether the travel insurance was claimed (1) or not (0), we worked with the classification model of supervised machine learning. The classification model's algorithms attempt to learn patterns from the data, and if the model is successful, will gain the ability to make accurate predictions for likelihood of claims.
