@@ -48,6 +48,37 @@ The following attributes are contained in the dataset:
 
 Answers to these questions can be used to determine sales strategies for areas that are lacking, risky areas to sell travel insurance and if the business is a worthwhile investment.
 
+### Technology Used
+
+**Programming language:** Python
+
+**Libraries:**
+
+- Pandas – library for data manipulation and analysis;
+- NumPy – library that performs numerical calculations;
+- SQLAlchemy – library that facilitates the communication between Python programs and databases;
+- Psycopg2 – a PostgreSQL database driver, it is used to perform operations on PostgreSQL using Python;
+- Matplotlib – plotting library;
+- Seaborn – a Python data visualization library based on matplotlib;
+- Scikit-learn – a software machine learning library;
+- Imbalanced-learn – library provides tools when dealing with classification with imbalanced classes.
+
+**Tools and methods:**
+
+- LabelEncoder – tool for encoding the levels of categorical data into numerical data;
+- OneHotEncoder – tool for encoding the levels of categorical data into numerical data;
+- pd.get_dummies() – Pandas method used for data manipulation. It converts categorical data into dummy or indicator variables;
+- StandardScaler – module to scale data. It standardizes the data such that its distribution will have a mean value 0 and standard deviation of 1;
+- Quick DBD – online tool to create ERD with relationships.
+
+**Software:**
+
+- PostgreSQL - relational database system;
+- pgAdmin – GUI (Graphical User Interface) tool used to interact with the Postgres database sessions;
+- Tableau - data visualization software;
+- Google Slides - online presentation app that lets create and format presentations.
+
+
 ## GitHub
 
 A GitHub repository was started for the team to contribute and collaborate based on the portion of the final project being worked on. Each team member was to have at least four commits per segment to keep track of the work that had to be done. Below is a list of six branches created for the Data Science Final Project Group 6.
