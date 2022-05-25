@@ -108,11 +108,9 @@ The cleaned dataset was then imported to PostgreSQL. For these purposes `sqlalch
 
 Since our dataset contains labeled data and we knew our output, whether the travel insurance was claimed (1) or not (0), we worked with the classification model of supervised machine learning. The classification model's algorithms attempt to learn patterns from the data, and if the model is successful, will gain the ability to make accurate predictions for likelihood of claims.
 
-The dataset was divided into a target and features. The target is the Claim column. The features are all the other columns, because we want to predict whether the person will claim a travel insurance based on different criteria (travel destination, duration, age of insured person, etc.).
+At first run, as a preprocessing step, we used get_dummies encoder. Encoding converts categorical data into dummy or indicator variables. Then the dataset was divided into a target (Claim column) and features - all the other columns, because we wanted to predict whether the person will claim a travel insurance based on different criteria (travel destination, duration, age of insured person, etc.). The dataset was split into training and testing sets using train_test_split module with 75% of training data and 25% of testing data. Machine learning model learned patterns from the training dataset. It then used the testing dataset to evaluate its performance.
 
-We used Scikit-learn library to implement a machine learning model in Python. Logistic Regression was chosen since this is a popular classification model. It predicts binary outcomes, meaning that there are only two possible outcomes. The dataset was split into training and testing sets for the supervised learning model. The dataset was split using train_test_split module with 75% of training data and 25% of testing data. The Logistic Regression model learned patterns from the training dataset. It then used the testing dataset to assess its performance.
-
-Logistics Regression itself gave an accuracy of 98.53% and balanced accuracy score of 50%. This huge difference is because the dataset is not balanced. We can see this also from checking the balance of our target values that show us 61,373 lines of data for not claimed insurance and only 917 lines of data for claimed.
+Logistic Regression was chosen first since this is a popular classification model. It predicts binary outcomes, meaning that there are only two possible outcomes. Logistics Regression itself gave an accuracy of 98.53% and balanced accuracy score of 50%. This huge difference is because the dataset is not balanced. We can see this also from checking the balance of our target values that show us 61,373 lines of data for not claimed insurance and only 917 lines of data for claimed.
 
 Ensemble decision tree models were then used to see how the accuracy scores could be evaluated further to take into consideration the class imbalance, as well as to take into consideration precision and recall. The concept of ensemble learning is the process of combining multiple models, like decision tree algorithms, to help improve the accuracy and robustness, as well as decrease variance of the model, and therefore increase the overall performance of the model.
 
@@ -125,12 +123,11 @@ The following models were used for testing:
 - Cluster Centroid
 - SMOTEENN
 
-At first run, as a preprocessing step, we used get_dummies encoder. The Balanced Random Forest Classifier, Naive Random Oversampling, and Undersampling models were all considered since they provided the highest scores. Undersampling was then ruled out, because although it had a high Balanced Accuracy score, the Recall score was the lowest.
+Balanced Random Forest Classifier, Naive Random Oversampling, and Undersampling models were all considered since they provided the highest scores. Undersampling was then ruled out, because although it had a high Balanced Accuracy score, the Recall score was the lowest.
 
 ![image_FirstRoundScores.png](Analysis/FirstRoundScores.png)
 
-
-The models were then re-run trying OneHotEncoder and LabelEncoder methods, which lowered the scores. The best results were obtained when get_dummies was applied for all models. Using get_dummies converts categorical data into dummy or indicator variables. Standard scaler was then applied, and the data was re-run. Variables that are measured at different scales do not contribute equally to the model fitting and model learned function which might end up creating a bias. To deal with this potential problem StandardScaler() module was applied prior to model fitting. Standard scaler improved the scores even more.
+The models were then re-run trying OneHotEncoder and LabelEncoder methods, which in the end only lowered the scores, so we reverted to get_dummies method. Encoder converts categorical data into dummy or indicator variables. Standard scaler was then applied, and the data was re-run. Variables that are measured at different scales do not contribute equally to the model fitting and model learned function which might end up creating a bias. To deal with this potential problem StandardScaler() module was applied prior to model fitting. Standard scaler improved the scores as per below picture:
 
 ![image_ScoresGetDummies.png](Analysis/ScoresGetDummies.png)
 
