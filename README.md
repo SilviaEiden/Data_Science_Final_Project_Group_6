@@ -189,7 +189,7 @@ No, we were not able to find a relationship between the features and the output 
 
 Travel duration was the feature that had the highest number of claims. The average travel duration is 48.6 days for sold travel insurance plans and 111.7 days for travel insurance plans that had a claim. With this data we can glean that most of the travel insurance customers were doing long term travel. This could mean these are long term business travelers. Having more information, like knowing what countries have laws that center around travel insurance requirements, could provide more context.
 
-The average age of travel insurance buyers is 36 years old who fall in the age bin of 35-39 years old. That represents 47% of the total travel insurance buyers. It would be interesting to have more information on this group, such as type of travel (business or pleasure) to see if the theory that these are business travelers holds true.
+The average age of travel insurance buyers is 38 years old who fall in the age bin of 35-39 years old. That represents 47% of the total travel insurance buyers. It would be interesting to have more information on this group, such as type of travel (business or pleasure) to see if the theory that these are business travelers holds true.
 
 The Travel Insurance Dataset is from a third-party travel insurance servicing company that is based in Singapore. As a result, Asia and North America are heavily highlighted with most travel insurance claims in the world map. If we had more time, we would have to run data specifically on Singapore. Singapore had the largest and most disproportionate share of travel insurance plans sold and claimed.
 
